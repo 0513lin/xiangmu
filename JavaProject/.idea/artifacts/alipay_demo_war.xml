@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="alipay-demo:war">
+    <output-path>$PROJECT_DIR$/alipay-demo/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>alipay-demo</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="alipay-demo-1.0.0.war">
+      <element id="artifact" artifact-name="alipay-demo:war exploded" />
+    </root>
+  </artifact>
+</component>

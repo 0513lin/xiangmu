@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>公共文件</title>
+
+</head>
+<body>
+  <script type="text/javascript" th:inline="javascript">
+      var contextPath = [[${#request.getContextPath()}]]; //licai
+
+      var returnUrl  = window.location.href;
+      //登录的处理 class="btn-login"
+      $(function(){
+          $(".btn-login").on("click",function(){
+              window.location.href = contextPath + "/loan/page/login?returnUrl="+returnUrl;
+          })
+      })
+
+  </script>
+</body>
+
+</html>

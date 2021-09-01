@@ -1,0 +1,34 @@
+server:
+  port: 8001
+  servlet:
+    context-path: /licai
+
+#配置模板
+spring:
+  application:
+    name: micr-web
+  thymeleaf:
+    cache: false
+
+
+dubbo:
+  scan:
+    base-packages: com.bjpowernode.web
+  protocol:
+    name: dubbo
+  registry:
+    address: zookeeper://localhost:2181
+  consumer:
+    check: false
+    timeout: 10000
+    retries: 0
+
+#配置京东万象短信接口
+jdwx:
+  sms:
+    url: https://way.jd.com/chuangxin/dxjk
+    content: 【动力金融】你的验证码是：%s，3分钟内有效！
+    appkey: 3680fa919b771148da626bbcbd459475
+  realname:
+    url: https://way.jd.com/youhuoBeijing/test
+    appkey: 3680fa919b771148da626bbcbd459475
